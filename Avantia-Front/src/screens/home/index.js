@@ -9,38 +9,22 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from '../../components/lista/listItems';
 import Chart from '../../components/grafico/Chart';
 import Deposits from '../../components/atualizacao/Deposits';
 import Orders from '../../components/recentes/Orders';
 import { useStyles } from './styles';
-import { Copyright } from '../../components/copyright/avantia';
-import api from '../../config/api'
+import { Copyright } from '../../components/copyright/avantia'
 
 
 export default function Dashboard() {
   const classes = useStyles();
-  const [data, setData] = React.useState([]);
   const [open, setOpen] = React.useState(true);
-
-React.useEffect(() => {
-  const fetchData = async () => {
-    const response = await api.get('posts');
-    setData(response.data);
-  };
-
-  fetchData();
-  console.log(data);
-},
-[]);  
-
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -66,11 +50,6 @@ React.useEffect(() => {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -112,7 +91,6 @@ React.useEffect(() => {
                 <Orders />
               </Paper>
             </Grid>
-            
           </Grid>
           <Box pt={4}>
             <Copyright />

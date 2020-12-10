@@ -1,34 +1,34 @@
 import { makeStyles } from '@material-ui/core/styles';
-import car from '../../assets/cartaovermelho.png'
+
 
 export const useStyles = makeStyles((theme) => ({
-  root: {
-    height: '100vh',
+  icon: {
+    marginRight: theme.spacing(2),
   },
-  image: {
-    backgroundImage: `url(${car})` ,
-    backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-    backgroundSize: 'contain',
-    width: '70%',
-    backgroundPosition: 'center',
+  heroContent: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
   },
-  paper: {
-    margin: theme.spacing(8, 4),
+  heroButtons: {
+    marginTop: theme.spacing(4),
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
   },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+  cardMedia: {
+    paddingTop: '56.25%', // 16:9
   },
-  form: {
-    width: '70%', // Fix IE 11 issue.
-    marginTop: '10vh',
+  cardContent: {
+    flexGrow: 1,
   },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
   },
 }));

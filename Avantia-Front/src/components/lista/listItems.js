@@ -1,14 +1,16 @@
+
 import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import Link from '@material-ui/core/Link';
 
 export const mainListItems = (
   <div>
@@ -16,11 +18,13 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <Link color="inherit" href="../cameras">
+          Câmeras
+        </Link>{' '}
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <SportsSoccerIcon />
       </ListItemIcon>
       <ListItemText primary="Jogos" />
     </ListItem>
@@ -34,13 +38,23 @@ export const mainListItems = (
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="Campeonatos" />
+      <ListItemText primary="Processos" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Processos" />
+     <Link color="inherit" href="../#">
+          Sair do Sistema
+          </Link>{' '}
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+     <Link color="inherit" href="../cadastroLogin">
+          Cadastro de Func
+          </Link>{' '}
     </ListItem>
   </div>
 );
@@ -52,7 +66,7 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Este Mês" />
+      <ListItemText primary="Esse Mês" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>

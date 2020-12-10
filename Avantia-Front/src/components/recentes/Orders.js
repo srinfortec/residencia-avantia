@@ -14,11 +14,14 @@ function createData(id, date, name, shipTo, paymentMethod, amount) {
 }
 
 const rows = [
-  createData(0, '16 Mar, 2020', 'João Mané', 'Recife, Pe', '0000021-99.2020.8.17.2001', 2),
-  createData(1, '01 Mai, 2017', 'José McCartney', 'São Lourenço , Pe', '0000041-99.2017.8.17.2001', 2),
-  createData(2, '26 Nov, 2020', 'Tom Barbosa', 'Recife, Pe', '0000088-99.2020.8.17.2001', 1),
-  createData(3, '06 Fev, 2019', 'Michael Jackson', 'Recife, Pe', '0000077-99.2019.8.17.2001', 5),
-  createData(4, '15 Dez, 2018', 'Bruce Springsteen', 'Caruaru, Pe', '0000055-99.2018.8.17.2001', 3),
+  createData(0, '16 Mar, 2020', 'João Mané', '2, Portao B', '0000021-99.2020.8.17.2001', 2),
+  createData(1, '01 Mai, 2017', 'José McCartney', '1, Portão H', '0000041-99.2017.8.17.2001', 2),
+  createData(2, '26 Nov, 2020', 'Marcio Barbosa', '2, Portao A', '0000088-99.2020.8.17.2001', 1),
+  createData(3, '06 Fev, 2019', 'Miguel Jackson', '3, Portão C', '0000077-99.2019.8.17.2001', 5),
+  createData(4, '15 Dez, 2018', 'Emerson Springsteen', '1, Portão D', '0000055-99.2018.8.17.2001', 3),
+  createData(5, '01 Jun, 2019', 'Filipe Ted', '2, Portao A', '0000044-97.2019.8.17.2001', 1),
+  createData(6, '06 Abr, 2020', 'Hemir Abreu', '3, Portão C', '0000011-89.2020.8.17.2001', 5),
+  createData(7, '15 Dez, 2020', 'Thiago Springsteen', '1, Portão D', '0000666-99.2020.8.17.2001', 3),
 ];
 
 function preventDefault(event) {
